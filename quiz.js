@@ -74,8 +74,7 @@ start_btn.addEventListener("click", function(){
     setTimeout(function(){
         container_start.style.display = "flex"
         container_main.style.display = "none"
-        container_h1.innerHTML = `Ви дали ${correct_answers_given} правильних відповідей із ${total_answers_given}.
-        Точність - ${Math.round(correct_answers_given * 100/total_answers_given)}%`
+        container_h1.innerHTML = `accuracy - ${Math.round(correct_answers_given * 100/total_answers_given)}% ${correct_answers_given} right answers from ${total_answers_given}.`
     }, 10000)
 })
 
@@ -125,17 +124,18 @@ function switchcolor() {
     let body = document.querySelector('body');
     if (body.style.backgroundColor === 'black') {
         body.style.backgroundColor = 'white';
-        hi.style.color = 'black';
+        container_h1.style.color = 'black';
         btn.style.border = '2px solid black';
         answer_buttons.style.color = 'black';
     } else {
         body.style.backgroundColor = 'black';
-        hi.style.color = 'white';
+        container_h1.style.color = 'white';
         btn.style.border = '2px solid white';
         answer_buttons.style.color = 'white';
+        start_btn.style.border = '2px solid white'
+        start_btn.style.backgroundColor = 'black';
     }
 }
 
-let hi = document.querySelector('.container_h1');
 let btn = document.querySelector('.switch_btn');
 btn.addEventListener('click', switchcolor);
