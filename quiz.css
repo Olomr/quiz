@@ -44,7 +44,7 @@ body{
 
 
 .answer:hover{
-    box-shadow: 2px 2px 2px orange;
+    box-shadow: 2px 2px 2px red;
 }
 
 
@@ -54,11 +54,12 @@ body{
 
 
 .start_btn {
+    color: white;
     font-size: 20px ;
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 15px;
     border-radius: 20px;
-    background-color: rgb(29, 204, 6);
+    background-color: black;
 }
 
 
