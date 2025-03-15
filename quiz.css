@@ -54,6 +54,7 @@ body{
 
 
 .start_btn {
+    cursor: pointer;
     color: white;
     font-size: 20px ;
     border: 2px solid white;
