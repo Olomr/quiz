@@ -7,9 +7,9 @@ function randint(min, max) {
 }
 
 
-let signs = ["+", "-", "*", "/"]
+let signs = ["+", "-", "*"]
 function getRandomSign(){
-    return signs[randint(0, 3)]
+    return signs[randint(0, 2)]
 }
 
 
@@ -29,9 +29,9 @@ class Question{
         else if(sign == "*"){
         this.correct = a * b
         }
-        else if(sign == "/"){
+        /*else if(sign == "/"){
         this.correct =  a / b
-        }
+        }*/
         //
         this.answers = [
             randint (this.correct - 15, this.correct - 1),
@@ -75,7 +75,7 @@ start_btn.addEventListener("click", function(){
         container_start.style.display = "flex"
         container_main.style.display = "none"
         container_h1.innerHTML = `accuracy - ${Math.round(correct_answers_given * 100/total_answers_given)}% ${correct_answers_given} right answers from ${total_answers_given}.`
-    }, 10000)
+    }, 100000)
 })
 
 
